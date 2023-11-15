@@ -1,0 +1,32 @@
+ALGORITHM is_palindrome
+VAR
+    i, j, n= INTEGER
+    word = STRING
+    n = length(word)
+BEGIN
+
+    // Empty word or single-character word is a palindrome
+    IF (n <= 1) THEN write: "is a palindrome"
+    END_IF 
+    
+
+    // Counters Initialisation
+    i = 0
+    j = n - 1
+
+    WHILE (i < j) DO
+//  Compare characters at the ends of the word
+    if word[i] != word[j]:
+    write:"is not a palindrome" // Stop if characters are different
+
+// Move counters towards the center
+    IF (i += 1 ; j -= 1) THEN write: "is a palindrome"
+    END_IF // If the loop completes, the word is a palindrome
+    END_WHILE
+
+    word1 = "radar"
+    word2 = "python"
+
+    write:"word1 {is_palindrome(word1)}"
+    write:"word2 {is_palindrome(word2)}"
+END
